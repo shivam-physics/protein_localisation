@@ -1,0 +1,21 @@
+#include "toppar/martini_v2.2.itp"
+#include "toppar/martini_v2.0_ions.itp"
+#include "toppar/martini_v2.0_lipids_all_201506.itp"
+#include "toppar/molecule_0.itp"
+[ system ]
+; name
+asymmetric 
+
+[ molecules ]
+; name number
+CCR      6
+CHOL   228
+DIPC   988
+DPPC   304
+CHOL   228
+DIPC   988
+DPPC   304
+WF    9519
+W           82691
+NA               1488
+CL               1488

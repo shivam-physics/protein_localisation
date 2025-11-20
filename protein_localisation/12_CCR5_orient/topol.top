@@ -1,0 +1,21 @@
+#include "toppar/martini_v2.2.itp"
+#include "toppar/martini_v2.0_ions.itp"
+#include "toppar/martini_v2.0_lipids_all_201506.itp"
+#include "toppar/molecule_0.itp"
+[ system ]
+; name
+12CCR5+bilayer
+
+[ molecules ]
+; name number
+DIPC  988
+CHOL  228
+DPPC  304
+DIPC  988
+CHOL  228
+DPPC  304
+CCR  12
+WF  10379
+W           90179
+NA               1615
+CL               1615
