@@ -1,0 +1,23 @@
+#include "toppar/martini_v2.2.itp"
+#include "toppar/martini_v2.0_ions.itp"
+#include "toppar/martini_v2.0_lipids_all_201506.itp"
+#include "toppar/molecule_0.itp"
+[ system ]
+; name
+15OPC_6_CCR5_random 
+
+[ molecules ]
+; name number
+CHOL    228
+DIPC   760
+DPPC    304
+OPC    228
+CHOL    228
+DIPC   760
+DPPC    304
+OPC    228
+CCR      6
+WF    9777
+W           85339
+NA               1328
+CL               1328
