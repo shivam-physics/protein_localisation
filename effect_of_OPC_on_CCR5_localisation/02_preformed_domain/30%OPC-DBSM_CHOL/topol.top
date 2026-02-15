@@ -1,0 +1,25 @@
+#include "toppar/martini_v2.2.itp"
+#include "toppar/martini_v2.0_ions.itp"
+#include "toppar/martini_v2.0_lipids_all_201506.itp"
+#include "toppar/molecule_700.itp"
+
+[ system ]
+; name
+OPC_break_20_15
+
+[ molecules ]
+; name number
+DIPC   532
+OPC    456
+
+CHOL   228
+DBSM   304
+DIPC   532
+OPC    456
+CHOL   228
+DBSM   304
+CCR     4
+WF    9791
+W           85533
+NA               1295
+CL               1295

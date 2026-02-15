@@ -1,0 +1,17 @@
+; dummy.itp
+[ moleculetype ]
+; Name    nrexcl
+DUMMY     1
+
+[ atoms ]
+; nr  type  resnr residue  atom  cgnr  charge  mass
+  1   DUM   1     DUM      DUM   1     0.0    
+
+
+  
+#ifdef POSRES_DUM
+[ position_restraints ]
+   ; ai  funct  fcx   fcy   fcz
+  1   1      1000  0  0
+#endif
+

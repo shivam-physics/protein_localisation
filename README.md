@@ -1,7 +1,7 @@
 # Controlling Spatial Organization of HIV Co-Receptor CCR5
 This repository contains the initial structures, and input parameters for the simulations presented in [1], organized by system composition as follows:
 
-## protein_localisation (CCR5 Organization)
+## CCR5_localisation
 
 ### 01_spontaneous_assembly/
 
@@ -11,11 +11,11 @@ This repository contains the initial structures, and input parameters for the si
 
 ### 04_PMF_calculations/
 
-### 05_ENM_parameterization/ 
+### 05_ENM/ 
 
-## LysoPC_Localisation
+## effect_of_lysoPC
 
-## protein_delocalisation
+## effect_of_OPC_on_CCR5_localisation
 
 ### 01_spontaneous_assembly/
 

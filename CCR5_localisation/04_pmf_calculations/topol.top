@@ -1,0 +1,27 @@
+#include "toppar/martini_v2.2.itp"
+#include "toppar/martini_v2.0_ions.itp"
+#include "toppar/martini_v2.0_lipids_all_201506.itp"
+#include "toppar/molecule_0.itp"
+#include "toppar/DIPR.itp"
+#include "toppar/DIPC.itp"
+[ system ]
+; name
+CCR5_MINI
+[ molecules ]
+; name number
+
+DIPC  133
+DIPR    44
+
+DPPC   97
+DPPR    32
+CHOL   97
+DIPC  177
+
+DPPC   129
+CHOL   97
+CCR      1
+WF  1878
+W           16363
+NA               271
+CL               271

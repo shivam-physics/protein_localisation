@@ -1,0 +1,70 @@
+title       = Umbrella pulling simulation 
+; Run parameters
+define                   = -DZ_RES -DPOSRES_FLAT
+integrator  = md
+dt          = 0.02
+tinit       = 0
+nsteps      = 30000000    ; 100 ns
+
+refcoord-scaling = com    ; <--- ADD THIS to fix Warning 1
+
+
+comm-mode                = Linear
+nstcomm                  = 10
+comm-grps                = system
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 20000
+nstenergy                = 10
+nstxout-compressed       = 500
+compressed-x-precision   = 200
+
+cutoff-scheme            = Verlet
+nstlist                  = 20
+
+ns_type                  = grid
+pbc                      = xyz
+verlet-buffer-tolerance  = 0.005
+
+epsilon_r                = 15
+coulombtype              = reaction-field
+rcoulomb                 = 1.1
+vdw_type                 = cutoff
+vdw-modifier             = Potential-shift-verlet
+rvdw                     = 1.1
+
+tcoupl                   = v-rescale
+tc-grps                  = system
+tau_t                    = 1.0 
+ref_t                    = 303.15
+
+; Pressure coupling:
+Pcoupl                   = Berendsen
+Pcoupltype               = anisotropic
+tau_p                    = 5.0
+compressibility          = 3e-4 0 3e-4 0 0 0
+ref_p                    = 1.0  1.0 1.0 0 0 0 
+
+; Pull code
+pull                    = yes
+pull_ncoords            = 1         ; only one reaction coordinate
+pull_ngroups            = 2    
+pull_group1_name        = protein     ; two groups defining one reaction coordinate
+pull_group2_name        = lipid_disorder
+pull_coord1_type        = umbrella  ; harmonic potential
+pull-coord1-geometry    = distance 
+pull_coord1_dim         = Y N N 
+pull_coord1_groups      = 1 2
+pull_coord1_start       = yes       
+
+pull_coord1_rate        = 0.00005      ;
+pull_coord1_k           = 3000     ; kJ mol^-1 nm^-2
+
+;distance
+pull-group2-pbcatom = 314
+pull-pbc-ref-prev-step-com = yes
+
+
+
+
