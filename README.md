@@ -15,7 +15,7 @@ This repository contains the initial structures, and input parameters for the si
 
 ## LysoPC_Localisation
 
-## CCR5_delocalisation
+## protein_delocalisation
 
 ### 01_spontaneous_assembly/
 
